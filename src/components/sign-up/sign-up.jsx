@@ -37,9 +37,9 @@ class SignUp extends React.Component {
 				password: '',
 				confirmPassword: ''
 			})
-			console.log('Synchronization succeeded');
+			console.log('Sign-up succeeded');
 		} catch (error) {
-			console.log('Synchronization failed', error.message);
+			console.log('Sign-up', error.message);
 		}
 	}
 
