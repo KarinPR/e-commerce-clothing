@@ -1,0 +1,15 @@
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+
+	h2 {
+		color: #07AA1B;
+		&.title {
+			margin: 20px 0;
+		}
+	}
+	span {
+		color: #17571F;
+	}
+}
