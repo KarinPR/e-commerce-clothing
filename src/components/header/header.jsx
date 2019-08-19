@@ -1,21 +1,24 @@
 import React from 'react';
+import CartIcon from './../cart-icon/cart-icon'
+import CartDropdown from './../cart-dropdown/cart-dropdown'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux';
 
 import { auth } from './../../firebase/firebase.utils'
 import { ReactComponent as Logo } from '../../assets/logo.svg'
+
 // import SHOP_DATA from './shop-data'
 
 import './header.scss'
 
-const mapStateToProps = state => {
+const mapStateToProps = ({user: { currentUser }, cart: { hidden } }) => {
   return {
-    currentUser : state.user.currentUser ,
+    currentUser,
+    hidden
   }
 }   
 
-
-const Header = ({ currentUser }) => (
+const Header = ({ currentUser, hidden }) => (
 	<div className = 'header'>
 		<Link className = 'logo-container' to = '/' > 
 			<Logo className = 'logo' />
@@ -38,7 +41,13 @@ const Header = ({ currentUser }) => (
 					</Link>
 
 			}
+			<CartIcon />
 		</div>
+		{
+			hidden ? null : <CartDropdown/>
+		}
+
+		
 		
 	</div>
 )
