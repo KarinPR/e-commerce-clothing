@@ -13,6 +13,8 @@
   font-weight: 900;
   border: none;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
 
   &:hover {
     background-color: white;
@@ -25,6 +27,18 @@
 
     &:hover{
       background-color: #006132;
+      border: none;
+    }
+  }
+
+  &.inverted{
+    background-color: white;
+    color: #07AA1B;
+    border: 2px solid #07AA1B;
+
+    &:hover{
+      background-color: #07AA1B;
+      color: white;
       border: none;
     }
   }
