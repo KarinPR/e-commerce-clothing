@@ -6,7 +6,6 @@ import React from 'react';
 // import { addItem } from './../../redux/cart/cart.actions';
 import './cart-item.scss'
 
-
 const CartItem = ({ item : { name, imageUrl, price, quantity } }) => {
 	return (
 	<div className = 'cart-item' >
