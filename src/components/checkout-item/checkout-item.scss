@@ -28,10 +28,19 @@
   .name {
     font-weight: 900;
     color: #07AA1B;
+    padding-right: 15px;
   }
 
   .quantity {
-    padding-left: 55px;
+    display: flex;
+    /*padding-left: 55px;*/
+    .arrow {
+      cursor: pointer;
+    }
+
+    .value {
+      margin: 0 20px;
+    }
   }
 
   .price {
