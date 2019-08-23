@@ -3,10 +3,12 @@ import CollectionItem from '../collection-item/collection-item'
 
 import './collection-preview.scss'
 
-const CollectionPreview = ({ title, items }) => (
-	// console.log(title)
+const CollectionPreview = ({ title, items, match, history }) => {
+	// console.log(otherCollectionProps)
+	return (
+	
 	<div className = 'collection-preview'>
-		<h1 className = 'title'> {title.toUpperCase()} </h1>
+		<h1 className = 'title' onClick = {() => history.push(`${match.url}/${title.toLowerCase()}`)}> {title.toUpperCase()} </h1>
 		<div className = 'preview'>
 			{
 				items
@@ -17,6 +19,6 @@ const CollectionPreview = ({ title, items }) => (
 			}
 		</div>
 	</div>
-)
+)}
 
 export default CollectionPreview;
