@@ -11,6 +11,7 @@ const mapStateToProps = (state, ownProps) => ({
 })
 
 const CollectionPage = ({ collection }) => {
+	console.log(collection)
 	return (
 	<div className = 'collection-page'>
 		<h2 className = 'title'> {collection.title} </h2>

@@ -18,7 +18,7 @@ import { setCurrentUser } from './redux/user/user.actions';
 import { selectCurrentUser } from './redux/user/user.selectors'
 
 const mapStateToProps = createStructuredSelector({
-    currentUser : selectCurrentUser ,
+    currentUser : selectCurrentUser 
 }   )
 
 const mapDispatchToProps = (dispatch) => {
@@ -45,12 +45,12 @@ class App extends React.Component {
       } else {
         setCurrentUser(null)
       }
+
     })
   }
 
   componentWillUnmount() {
     this.unsubscribeFromAuth()
-    // console.log(user.emailVerified)
   }
 
 

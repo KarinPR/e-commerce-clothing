@@ -1,15 +1,16 @@
 import React from 'react';
 import CollectionItem from '../collection-item/collection-item'
 
-import './collection-preview.scss'
+import { CollectionPreviewContainer, TitleContainer, PreviewContainer } from './collection-preview.styles'
+
 
 const CollectionPreview = ({ title, items, match, history }) => {
 	// console.log(otherCollectionProps)
 	return (
 	
-	<div className = 'collection-preview'>
-		<h1 className = 'title' onClick = {() => history.push(`${match.url}/${title.toLowerCase()}`)}> {title.toUpperCase()} </h1>
-		<div className = 'preview'>
+	<CollectionPreviewContainer>
+		<TitleContainer onClick = {() => history.push(`${match.url}/${title.toLowerCase()}`)}> {title.toUpperCase()} </TitleContainer>
+		<PreviewContainer>
 			{
 				items
 				.filter((item, index) => ( index < 4 ))
@@ -17,8 +18,8 @@ const CollectionPreview = ({ title, items, match, history }) => {
 					<CollectionItem key = {item.id} item = {item} />
 				))
 			}
-		</div>
-	</div>
+		</PreviewContainer>
+	</CollectionPreviewContainer>
 )}
 
 export default CollectionPreview;
